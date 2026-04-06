@@ -1,16 +1,17 @@
-# API Gateway
+# API Gateway Service
 
-El API Gateway es el punto de entrada único para todas las solicitudes de los clientes. Se encarga de enrutar el tráfico hacia los microservicios correspondientes basándose en la ruta de la URL.
+## Description
+This service acts as the entry point for the microservices architecture. It handles routing requests to the appropriate backend services using Spring Cloud Gateway.
 
-## Detalles Técnicos
-- **Puerto:** 8080
-- **Tecnología:** Spring Cloud Gateway.
-- **Enrutamiento:** Utiliza Eureka para localizar las instancias de los servicios.
+## Features
+- Request Routing
+- Load Balancing (via Eureka)
+- Centralized access to Products, Orders, and Payments.
 
-## Rutas Configuradas
-- `/productos/**` -> Redirige a `product-service`.
-- `/ordenes/**` -> Redirige a `order-service`.
-- `/pagos/**` -> Redirige a `payment-service`.
+## Port
+- Default: `8080`
 
-## Logs
-Este servicio escribe logs en el log group `api-gateway-log-group` en CloudWatch (LocalStack).
+## Endpoints
+- `/productos/**`: Proxies to Product Service
+- `/ordenes/**`: Proxies to Order Service
+- `/pagos/**`: Proxies to Payment Service
