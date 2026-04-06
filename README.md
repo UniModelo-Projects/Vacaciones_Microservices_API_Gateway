@@ -15,3 +15,6 @@ This service acts as the entry point for the microservices architecture. It hand
 - `/productos/**`: Proxies to Product Service
 - `/ordenes/**`: Proxies to Order Service
 - `/pagos/**`: Proxies to Payment Service
+
+## Infrastructure Repo
+- [Main Infrastructure & Orchestration](https://github.com/UniModelo-Projects/Vacaciones_Microservices_Infrastructure)
